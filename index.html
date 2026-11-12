@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica Bem-Estar - Sistema de Agendamento</title>
+    
+    <!-- Script para prevenir FOUC do Dark Mode -->
+    <script>
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#466150',
+                container: '#5e7a68',
+                fixed: '#cbead4',
+                light: '#e8f3ec',
+                dark: '#6ba37f'
+              },
+              secondary: {
+                DEFAULT: '#775a19',
+                gold: '#c5a059',
+                container: '#fed488',
+                fixed: '#ffdea5',
+                light: '#fbf6ed'
+              },
+              tertiary: '#725631',
+              surface: {
+                DEFAULT: '#f4fbf5',
+                low: '#f7f5f0',
+                container: '#eef5ef',
+                high: '#e3eae4',
+                lowest: '#ffffff',
+                // Dark mode surfaces
+                darkBg: '#0f1512',
+                darkCard: '#161f1a',
+                darkCardHigh: '#1e2a23',
+                darkBorder: '#27382f'
+              },
+              onSurface: '#101f16',
+              outline: '#727973',
+              outlineVariant: '#c2c8c1'
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              sans: ['Plus Jakarta Sans', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+      }
+      .font-serif-display {
+        font-family: 'Playfair Display', serif;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c2c8c1;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #2e4438;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #727973;
+      }
+    </style>
+  </head>
+  <body class="bg-surface-low dark:bg-surface-darkBg text-onSurface dark:text-gray-100 antialiased min-h-screen transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

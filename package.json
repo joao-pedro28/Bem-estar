@@ -1,0 +1,24 @@
+{
+  "name": "bem_estar_clinica",
+  "version": "1.0.0",
+  "description": "Sistema de Agendamento e Organização para Clínica de Massagem e Estética",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "node server/index.js",
+    "build": "vite build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "lucide-react": "^1.72.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "vite": "^8.3.8"
+  }
+}

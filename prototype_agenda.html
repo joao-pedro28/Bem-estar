@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clínica Bem-Estar - Agenda Clínica Diária</title>
+<!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#b0ceb9",
+            "error": "#ba1a1a",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#5d4201",
+            "tertiary-fixed": "#ffddb6",
+            "on-surface": "#101f16",
+            "surface-bright": "#ecfef0",
+            "surface-container-highest": "#d5e7d9",
+            "surface-container-high": "#dbeddf",
+            "background": "#ecfef0",
+            "secondary-container": "#fed488",
+            "surface-container": "#e1f2e5",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#2a1800",
+            "on-primary": "#ffffff",
+            "on-background": "#101f16",
+            "secondary-fixed": "#ffdea5",
+            "surface-dim": "#cdded1",
+            "primary-fixed": "#cbead4",
+            "on-secondary-fixed": "#261900",
+            "surface": "#ecfef0",
+            "error-container": "#ffdad6",
+            "outline": "#727973",
+            "tertiary": "#725631",
+            "secondary-fixed-dim": "#e9c176",
+            "on-primary-fixed": "#052013",
+            "on-tertiary-container": "#fffaf8",
+            "inverse-surface": "#25342b",
+            "on-surface-variant": "#424843",
+            "primary-container": "#5e7a68",
+            "surface-tint": "#496453",
+            "on-tertiary-fixed-variant": "#5c421f",
+            "surface-variant": "#d5e7d9",
+            "surface-container-low": "#e6f8ea",
+            "secondary": "#775a19",
+            "on-secondary-container": "#785a1a",
+            "primary": "#466150",
+            "tertiary-fixed-dim": "#e6c093",
+            "tertiary-container": "#8d6e47",
+            "outline-variant": "#c2c8c1",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#324c3d",
+            "primary-fixed-dim": "#b0ceb9",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#e3f5e7",
+            "on-primary-container": "#effff2",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem",
+            "margin": "2.5rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "title-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "display-lg": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f8f3;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c2c8c1;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #727973;
+    }
+  </style>
+</head>
+<body class="bg-surface-container-low text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TOP NAV BAR (Shared Component Execution) -->
+<header class="w-full h-18 px-space-lg flex justify-between items-center bg-surface-container-lowest border-b border-outline-variant/30 shadow-sm sticky top-0 z-50">
+<!-- Brand / Identity -->
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[26px]">spa</span>
+</div>
+<div>
+<span class="text-title-lg font-title-lg font-semibold text-primary block leading-tight">Clínica Bem-Estar</span>
+<span class="text-body-sm font-body-sm text-outline tracking-wider">Massoterapia &amp; Estética</span>
+</div>
+</div>
+<!-- Date Indicator -->
+<div class="hidden lg:flex items-center gap-2 pl-6 border-l border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">Quinta-feira, 24 de Outubro</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm uppercase">Hoje</span>
+</div>
+</div>
+<!-- Center/Trailing Actions & User Details -->
+<div class="flex items-center gap-space-md">
+<!-- Trailing Icon Actions -->
+<button class="relative p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors duration-200" title="Notificações">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface-container-lowest"></span>
+</button>
+<button class="p-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors duration-200" title="Agenda Rápida">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+</button>
+<div class="h-6 w-px bg-outline-variant/40 mx-1"></div>
+<!-- Primary Action: + Novo Agendamento -->
+<button class="px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center gap-2 shadow-sm transition-all duration-150 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>+ Novo Agendamento</span>
+</button>
+<!-- Profile Avatar & Details -->
+<div class="flex items-center gap-3 pl-2">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover border-2 border-primary-fixed shadow-sm" data-alt="Dra. Helena Valente, elegant wellness therapist and clinic head in a soft linen olive uniform with warm natural morning lighting inside a serene holistic medical spa clinic setting. Pristine calm lighting and tranquil ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyjL8cxJqtEJot5YNLGbn4EtR8m64RUe1DaCMfqgfZzN0qJ8ZQeHHh3va5U5HQtXokR46aTxDVS7JVyV18k7W6qhy11UuCDz1fde23tBYcJQRod0El1NmCoXcJ3c1ROxHPpSeNQeGv57nzZR5GfCDc6fqR0MR1it4SnO0MboxqH-cs_4GEObfO1JVPzpVRiVA4mFHIUILg5KXCOkRIOpwN6KNCJPW-Pt8m_OjhIOQ3vV8iQ-u9x_dR3hM3jJRKIvfyUsFsG5mzaWUe"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-primary rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="hidden xl:block text-left">
+<span class="block text-label-md font-label-md text-on-surface font-semibold leading-tight">Dra. Helena Valente</span>
+<span class="text-body-sm font-body-sm text-outline flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span> Atendendo agora
+          </span>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN BODY LAYOUT -->
+<div class="flex-1 flex max-w-[1720px] w-full mx-auto">
+<!-- LEFT SIDEBAR: Persistent Therapeutic Nav & Widgets -->
+<aside class="w-72 hidden md:flex flex-col justify-between p-space-md border-r border-outline-variant/30 bg-surface-container-low shrink-0 min-h-[calc(100vh-4.5rem)]">
+<div class="space-y-6">
+<!-- New Patient Quick Action CTA -->
+<button class="w-full py-2.5 px-space-md rounded-lg bg-surface-container-lowest border border-primary/30 text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-primary-fixed/20 transition-all active:scale-[0.99] shadow-sm">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Novo Paciente</span>
+</button>
+<!-- Navigation Tabs (from Shared Components JSON) -->
+<nav class="space-y-1">
+<!-- Active: Agenda Clínica -->
+<a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span>Agenda Clínica</span>
+</a>
+<a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Pacientes</span>
+</a>
+<a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined">spa</span>
+<span>Tratamentos</span>
+</a>
+<a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined">loyalty</span>
+<span>Pacotes &amp; Planos</span>
+</a>
+<a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Financeiro</span>
+</a>
+</nav>
+<!-- Mini-Calendário Mensal Interativo -->
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Outubro 2024</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[18px]">chevron_left</span></button>
+<button class="p-1 hover:bg-surface-container rounded transition-colors"><span class="material-symbols-outlined text-[18px]">chevron_right</span></button>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-1 text-center text-label-sm font-label-sm text-outline mb-2">
+<span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-body-sm font-body-sm">
+<span class="text-outline/40 py-1">29</span>
+<span class="text-outline/40 py-1">30</span>
+<span class="py-1 hover:bg-surface-container rounded">1</span>
+<span class="py-1 hover:bg-surface-container rounded">2</span>
+<span class="py-1 hover:bg-surface-container rounded">3</span>
+<span class="py-1 hover:bg-surface-container rounded">4</span>
+<span class="py-1 hover:bg-surface-container rounded">5</span>
+<span class="py-1 hover:bg-surface-container rounded">6</span>
+<span class="py-1 hover:bg-surface-container rounded">7</span>
+<span class="py-1 hover:bg-surface-container rounded">8</span>
+<span class="py-1 hover:bg-surface-container rounded relative">
+              9 <span class="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-secondary"></span>
+</span>
+<span class="py-1 hover:bg-surface-container rounded">10</span>
+<span class="py-1 hover:bg-surface-container rounded">11</span>
+<span class="py-1 hover:bg-surface-container rounded">12</span>
+<span class="py-1 hover:bg-surface-container rounded">13</span>
+<span class="py-1 hover:bg-surface-container rounded">14</span>
+<span class="py-1 hover:bg-surface-container rounded relative">
+              15 <span class="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary"></span>
+</span>
+<span class="py-1 hover:bg-surface-container rounded">16</span>
+<span class="py-1 hover:bg-surface-container rounded">17</span>
+<span class="py-1 hover:bg-surface-container rounded">18</span>
+<span class="py-1 hover:bg-surface-container rounded">19</span>
+<span class="py-1 hover:bg-surface-container rounded">20</span>
+<span class="py-1 hover:bg-surface-container rounded">21</span>
+<span class="py-1 hover:bg-surface-container rounded">22</span>
+<span class="py-1 hover:bg-surface-container rounded">23</span>
+<!-- Hoje: 24 Destaque -->
+<span class="py-1 rounded-lg bg-primary text-on-primary font-semibold shadow-xs relative">
+              24 <span class="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-secondary-fixed"></span>
+</span>
+<span class="py-1 hover:bg-surface-container rounded relative">
+              25 <span class="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-secondary"></span>
+</span>
+<span class="py-1 hover:bg-surface-container rounded">26</span>
+<span class="py-1 hover:bg-surface-container rounded">27</span>
+<span class="py-1 hover:bg-surface-container rounded">28</span>
+<span class="py-1 hover:bg-surface-container rounded">29</span>
+<span class="py-1 hover:bg-surface-container rounded">30</span>
+<span class="py-1 hover:bg-surface-container rounded">31</span>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/30 flex items-center justify-between text-label-sm font-label-sm text-outline">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> Consultas</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span> Pacotes</span>
+</div>
+</div>
+<!-- Dica do Dia: Aromaterapia & Bem-Estar -->
+<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/40">
+<div class="flex items-center gap-2 text-tertiary mb-1.5">
+<span class="material-symbols-outlined text-[18px]">local_florist</span>
+<span class="font-label-md text-label-md font-semibold uppercase tracking-wider">Aromaterapia do Dia</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant font-medium">Difusor: Lavanda &amp; Capim-limão para sessões da tarde.</p>
+<span class="text-label-sm font-label-sm text-primary mt-2 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Salas 01 e 02 prontas
+          </span>
+</div>
+</div>
+<!-- Sidebar Footer Navigation (Configurações e Suporte) -->
+<div class="pt-4 border-t border-outline-variant/30 space-y-1">
+<a class="flex items-center gap-3 px-space-md py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Configurações</span>
+</a>
+<a class="flex items-center gap-3 px-space-md py-2 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Suporte</span>
+</a>
+</div>
+</aside>
+<!-- CENTRAL CONTENT AREA: Clinical Agenda & Metrics -->
+<main class="flex-1 p-space-md lg:p-space-lg overflow-y-auto">
+<!-- 1. LINHA DE MÉTRICAS RÁPIDAS (Bento / Cards de Resumo do Dia) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-space-lg">
+<!-- Card 1: 8 Atendimentos Hoje -->
+<div class="p-4 lg:p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md text-outline font-medium">Sessões Marcadas</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">self_improvement</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">8</span>
+<span class="text-body-md font-body-md text-on-surface-variant">atendimentos</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-primary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +2 vs. ontem
+              </span>
+<span class="text-outline">62% concluído</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 62%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 2: 5 Pacotes Ativos -->
+<div class="p-4 lg:p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md text-outline font-medium">Pacotes &amp; Fidelidade</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/50 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">loyalty</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">5</span>
+<span class="text-body-md font-body-md text-on-surface-variant">pacotes ativos hoje</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span>4 renovações este mês</span>
+</div>
+<div class="w-full bg-secondary-fixed/30 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 3: 3 Horários Livres -->
+<div class="p-4 lg:p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md text-outline font-medium">Encaixes Disponíveis</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">hourglass_empty</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-primary font-semibold">3</span>
+<span class="text-body-md font-body-md text-on-surface-variant">janelas livres</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-label-sm font-label-sm text-outline">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-primary font-medium">11:30</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-primary font-medium">15:30</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-primary font-medium">17:30</span>
+</div>
+<span class="text-[11px] text-outline block mt-2">Destaque para encaixes rápidos</span>
+</div>
+</div>
+<!-- Card 4: Próximo Atendimento (Maria Silva) -->
+<div class="p-4 lg:p-5 rounded-xl bg-gradient-to-br from-surface-container-lowest to-surface-container-low border border-primary/20 shadow-sm flex flex-col justify-between relative">
+<div class="flex items-center justify-between mb-1">
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-wider flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Próximo: 14:00
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-error text-label-sm font-semibold">em 25 min</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface font-semibold truncate">Maria Silva</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Relaxante com Óleos Essenciais</p>
+<div class="mt-2.5 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline text-label-sm">Sala 01 (Térreo)</span>
+<button class="text-primary hover:text-primary-container font-label-sm font-semibold inline-flex items-center gap-0.5">
+                Ver Ficha <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. BARRA DE PESQUISA & FILTROS EM TEMPO REAL -->
+<section class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 shadow-sm mb-space-lg space-y-4">
+<div class="flex flex-col md:flex-row gap-3 items-center justify-between">
+<!-- Large Search Input -->
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-outline-variant/40 bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors" placeholder="Buscar paciente por nome, CPF ou procedimento..." type="text"/>
+</div>
+<!-- View Switcher (Dia / Semana / Mês) -->
+<div class="flex items-center bg-surface-container p-1 rounded-lg border border-outline-variant/20 self-stretch md:self-auto justify-center">
+<button class="px-4 py-1.5 rounded-md bg-surface-container-lowest text-primary font-label-md text-label-md font-semibold shadow-xs">Dia</button>
+<button class="px-4 py-1.5 rounded-md text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-colors">Semana</button>
+<button class="px-4 py-1.5 rounded-md text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-colors">Mês</button>
+</div>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 text-label-md font-label-md">
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-medium shrink-0 shadow-xs">Todos os Agendamentos</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors">Hoje</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">loyalty</span> Pacotes &amp; Planos
+          </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors">Atendimento Avulso</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors">Confirmados</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors">Em Andamento</button>
+</div>
+</section>
+<!-- 3. GRADE DE AGENDA DIÁRIA (Timeline 08:00 - 18:00) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Linha do Tempo da Clínica</h2>
+<p class="text-body-sm font-body-sm text-outline">Sessões terapêuticas programadas para 24 de Outubro</p>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Concluído</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Pacote Premium</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span> Encaixe</span>
+</div>
+</div>
+<!-- TIMELINE CONTAINER -->
+<div class="space-y-3.5">
+<!-- ITEM 1: 08:00 - 09:00 (Rodrigo Souza - Concluído) -->
+<div class="flex flex-col lg:flex-row gap-3 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 hover:border-primary/40 transition-all duration-150 shadow-xs opacity-90">
+<!-- Time Indicator Column -->
+<div class="w-full lg:w-36 flex lg:flex-col justify-between items-baseline lg:items-start shrink-0 border-b lg:border-b-0 lg:border-r border-outline-variant/20 pb-2 lg:pb-0 lg:pr-3">
+<span class="font-title-md text-title-md font-semibold text-on-surface">08:00 - 09:00</span>
+<span class="text-label-sm font-label-sm text-outline">60 minutos</span>
+<span class="inline-flex items-center gap-1 text-primary text-label-sm font-semibold mt-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Concluído
+              </span>
+</div>
+<!-- Client & Procedure Details -->
+<div class="flex-1 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="Rodrigo Souza, patient portrait with relaxed and rejuvenated expression after a deep tissue sports therapy massage session in a serene spa sanctuary with natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4lc2xWSaKzLrATZ4ia7OmkgpQV3jgyfwz7GQiMAxK8IJZZqAEnHMf4JqJbk3mHD1EeapMgyUgnBnKPfdxG7WFh7PCZORsa_M2IycXVcG6ANN2bT3fUdSF21MeWCR1kaJm4dM1hiyXN2nfHhi_rUOQHE_3sxByl3a5w4TY1A5QfAFEycZx8Ckj3Ii2w55IbJ3xsIEUFS-8tHUYAVYZuWptXs8jWphVuhQjJAFhlGt9hKOq-egBeJYkKrZaP8qC0t3I6ssjf3Bmb2GO"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Rodrigo Souza</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-medium">Atendimento Avulso</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary text-label-sm">Sala 01</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-0.5">Massagem Desportiva &amp; Liberação Miofascial</p>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-2 self-end md:self-center">
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant/40 text-on-surface-variant hover:bg-surface-container text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">history_edu</span> Ver Prontuário
+                </button>
+</div>
+</div>
+</div>
+<!-- ITEM 2: 09:30 - 10:30 (Camila Duarte - Pacote 7/10) -->
+<div class="flex flex-col lg:flex-row gap-3 bg-surface-container-lowest p-4 rounded-xl border-l-4 border-l-secondary border-t border-r border-b border-outline-variant/30 hover:border-primary/40 transition-all duration-150 shadow-xs">
+<div class="w-full lg:w-36 flex lg:flex-col justify-between items-baseline lg:items-start shrink-0 border-b lg:border-b-0 lg:border-r border-outline-variant/20 pb-2 lg:pb-0 lg:pr-3">
+<span class="font-title-md text-title-md font-semibold text-on-surface">09:30 - 10:30</span>
+<span class="text-label-sm font-label-sm text-outline">60 minutos</span>
+<span class="inline-flex items-center gap-1 text-secondary text-label-sm font-semibold mt-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Confirmado
+              </span>
+</div>
+<div class="flex-1 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-secondary-fixed" data-alt="Camila Duarte, sophisticated female patient smiling softly in a tranquil clinic lounge environment featuring natural wood and calming beige interior tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiE6-xQX2zLnYA1j6bYNj58Y4QdjH5MmB3tExc9he9ADsoxwpS6943HXTGToo5IXw7fiZN903DmISzarVaP8l9eWkyPZSy3I4mw3YmnrXMO0H6h-c6zd6d9McIBQqUyvj3QPEQZwo_GcHspuwfzp7DqvDDCZBmzvKdOpPUXi8inzgRVup14ANB60VB77Dj720yEjQOIuhQHoDaX3ttu-j4N_JkHiBxkSfS9772HWMSPATEj7oN3YWpOkPqDvGc-4v-GDQDrNplf7Mk"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Camila Duarte</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">loyalty</span> Pacote 7/10 sessões
+                    </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary text-label-sm">Sala 02</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-0.5">Drenagem Linfática Método Exclusivo</p>
+</div>
+</div>
+<!-- Actions: Concluir, WhatsApp, Remarcar -->
+<div class="flex items-center gap-2 self-end md:self-center flex-wrap">
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary text-label-sm font-label-sm transition-colors flex items-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-[16px]">check</span> Concluir
+                </button>
+<button class="px-3 py-1.5 rounded-lg border border-primary/30 text-primary hover:bg-primary-fixed/20 text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp
+                </button>
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant/40 text-on-surface-variant hover:bg-surface-container text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">edit_calendar</span> Remarcar
+                </button>
+</div>
+</div>
+</div>
+<!-- ITEM 3: 11:00 - 12:00 (Juliana Mendes - Pacote 3/5) -->
+<div class="flex flex-col lg:flex-row gap-3 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 hover:border-primary/40 transition-all duration-150 shadow-xs">
+<div class="w-full lg:w-36 flex lg:flex-col justify-between items-baseline lg:items-start shrink-0 border-b lg:border-b-0 lg:border-r border-outline-variant/20 pb-2 lg:pb-0 lg:pr-3">
+<span class="font-title-md text-title-md font-semibold text-on-surface">11:00 - 12:00</span>
+<span class="text-label-sm font-label-sm text-outline">60 minutos</span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant text-label-sm font-medium mt-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Confirmado
+              </span>
+</div>
+<div class="flex-1 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="Juliana Mendes, wellness enthusiast in a relaxed aesthetic studio waiting area with warm diffused light and organic green bamboo decor in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkFPL6n3Ruzq1sVhcroWIM-8JVLAIkNH6eDSOfQ1-aEEA2t5b-b1e5LqU7fswUbVNZzRQR-r8HzpfItjeBnSLL0CZTMLt87abUGwIFNh9VEblCZgEbCMPdVmkhFnqC1X5Kv_TpnAG68sntUDWx2ij7fI5bXVhRO7mAR9kbzpwJzs7Dhze_1rcQbi9cnFf1HQBW2vZU39m-zRJn6rxD3w2Gv-G-9UlXQHXpaDnNGZd8D3BRazyf7_CpqpyObPOExp8hhTThykYBGwfa"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Juliana Mendes</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/40 text-secondary text-label-sm font-medium">Pacote 3/5 sessões</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary text-label-sm">Sala 01</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-0.5">Massagem Relaxante com Pedras Quentes</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end md:self-center flex-wrap">
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check</span> Concluir
+                </button>
+<button class="px-3 py-1.5 rounded-lg border border-primary/30 text-primary hover:bg-primary-fixed/20 text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp
+                </button>
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant/40 text-on-surface-variant hover:bg-surface-container text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">edit_calendar</span> Remarcar
+                </button>
+</div>
+</div>
+</div>
+<!-- BREAK: 12:00 - 13:30 (Faixa de Almoço / Higienização) -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container border border-dashed border-outline-variant/60 text-on-surface-variant">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+<div>
+<span class="text-title-md font-title-md font-medium text-on-surface">12:00 - 13:30 • Intervalo de Almoço &amp; Higienização</span>
+<span class="text-body-sm font-body-sm text-outline block">Troca de lençóis hospitalares, higienização dos difusores e ventilação de salas.</span>
+</div>
+</div>
+<span class="hidden sm:inline-block px-3 py-1 rounded bg-surface-container-lowest text-outline text-label-sm font-medium">90 min</span>
+</div>
+<!-- ITEM 4: 14:00 - 15:00 (DESTAQUE: Maria Silva - Próximo Atendimento) -->
+<div class="flex flex-col lg:flex-row gap-3 bg-surface-container-lowest p-5 rounded-xl border-2 border-primary shadow-md relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="w-full lg:w-36 flex lg:flex-col justify-between items-baseline lg:items-start shrink-0 border-b lg:border-b-0 lg:border-r border-outline-variant/20 pb-2 lg:pb-0 lg:pr-3">
+<span class="font-title-md text-title-md font-bold text-primary">14:00 - 15:00</span>
+<span class="text-label-sm font-label-sm text-outline">60 minutos</span>
+<span class="inline-flex items-center gap-1.5 text-error text-label-sm font-semibold mt-1 bg-error-container/60 px-2 py-0.5 rounded-md">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> Próximo
+              </span>
+</div>
+<div class="flex-1 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<img class="w-14 h-14 rounded-full object-cover border-2 border-primary shadow-xs" data-alt="Maria Silva, warm smiling woman preparing for aromatherapy massage treatment in a luxurious sage green and linen clinical spa setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyWQYA95G-NW-ViKyaknzJy_giAuux3TqguOYdujrhhNdI1ZAV_kAXJtGdtYqiPrCx_EUxirasVOSM0jMHYLOWkpNAfxstlHu4e8KCFynJLpfUV0hidQFOVYpgLDZCcod-0CZQ12iIBm40ju0iWHuuzXRlBl3mNm-2STWpdHpjTDl6ryWftBStyw-txemTldLoeIOpWHBZTDBWD5e6Uvl-c1i_zYApeC1k06BzpumqvBqsIGl3TZY7hF9fu9pXEARLYZgohUH6QmLx"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Maria Silva</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">loyalty</span> Pacote 5/10 sessões
+                    </span>
+<span class="px-2.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed text-label-sm font-semibold">Sala 01 (Térreo)</span>
+</div>
+<p class="text-body-md font-body-md text-primary font-medium mt-1">Massagem Relaxante com Aromaterapia de Lavanda</p>
+<p class="text-body-sm font-body-sm text-outline mt-0.5">Observação da ficha: Sensibilidade muscular na região lombar.</p>
+</div>
+</div>
+<!-- High-Visibility Actions -->
+<div class="flex items-center gap-2 self-end md:self-center flex-wrap">
+<button class="px-4 py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary text-label-md font-label-md font-semibold transition-all duration-150 flex items-center gap-1.5 shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span> Concluir Atendimento
+                </button>
+<button class="px-3.5 py-2 rounded-lg border border-primary/40 text-primary hover:bg-primary-fixed/20 text-label-md font-label-md transition-colors flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[18px]">chat</span> WhatsApp
+                </button>
+<button class="px-3.5 py-2 rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container text-label-md font-label-md transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span> Remarcar
+                </button>
+</div>
+</div>
+</div>
+<!-- ENCAIXE LIVRE 1: 15:30 - 16:30 -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low border border-dashed border-primary/30 hover:border-primary transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+</div>
+<div>
+<span class="font-title-md text-title-md font-semibold text-primary">15:30 - 16:30 • Horário Livre Disponível</span>
+<span class="text-body-sm font-body-sm text-outline block">Sala 02 livre para massoterapia ou drenagem linfática</span>
+</div>
+</div>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest border border-primary text-primary hover:bg-primary hover:text-on-primary text-label-md font-label-md font-semibold transition-all flex items-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-[18px]">add</span> + Agendar Encaixe
+            </button>
+</div>
+<!-- ITEM 5: 16:30 - 17:30 (Lucas Fernandes - Atendimento Avulso) -->
+<div class="flex flex-col lg:flex-row gap-3 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 hover:border-primary/40 transition-all duration-150 shadow-xs">
+<div class="w-full lg:w-36 flex lg:flex-col justify-between items-baseline lg:items-start shrink-0 border-b lg:border-b-0 lg:border-r border-outline-variant/20 pb-2 lg:pb-0 lg:pr-3">
+<span class="font-title-md text-title-md font-semibold text-on-surface">16:30 - 17:30</span>
+<span class="text-label-sm font-label-sm text-outline">60 minutos</span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant text-label-sm font-medium mt-1">
+<span class="material-symbols-outlined text-[16px]">how_to_reg</span> Em Espera
+              </span>
+</div>
+<div class="flex-1 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="Lucas Fernandes, athletic young man in clinical reception room with calm posture awaiting postural therapy session with gentle natural backlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeAhEO8dk7CORRI0PoZEAsyP8sYnSwMjf5qM4gFUKVqaWkRfrQIJv8ywpHaBclnnNA3ptuD63tyM6NH9QSI2CwVgZ_qxyKH-QqucxJ_vFt7VuxeJqRoxbm7GwS4z6-naqnpYZO0J4q_xe7n7lciksEMn_CyfVwXwmpThe-fkyrkQk7RVgy-h6sMfhN662yhGoykQAr2aGtn5GmJ50wW8kPBNuCYjTaPX0N4R9TreBBqs0FEsQAgIlB_b4z1IsKvkXWpFnljGNOcCB5"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Lucas Fernandes</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-medium">Atendimento Avulso</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary text-label-sm">Sala 01</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-0.5">Massoterapia Terapêutica Postural</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end md:self-center flex-wrap">
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check</span> Concluir
+                </button>
+<button class="px-3 py-1.5 rounded-lg border border-primary/30 text-primary hover:bg-primary-fixed/20 text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp
+                </button>
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant/40 text-on-surface-variant hover:bg-surface-container text-label-sm font-label-sm transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">edit_calendar</span> Remarcar
+                </button>
+</div>
+</div>
+</div>
+<!-- ENCAIXE LIVRE 2: 17:30 - 18:30 (Fim de Tarde) -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low border border-dashed border-outline-variant/60 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[22px]">more_time</span>
+</div>
+<div>
+<span class="font-title-md text-title-md font-semibold text-on-surface-variant">17:30 - 18:30 • Horário Livre (Encaixe de Fim de Tarde)</span>
+<span class="text-body-sm font-body-sm text-outline block">Último horário do dia livre nas Salas 01 e 02</span>
+</div>
+</div>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest border border-primary/40 text-primary hover:bg-primary hover:text-on-primary text-label-md font-label-md font-semibold transition-all flex items-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-[18px]">add</span> + Agendar Encaixe
+            </button>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>
